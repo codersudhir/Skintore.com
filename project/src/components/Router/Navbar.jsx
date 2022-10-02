@@ -28,9 +28,7 @@ function Navbar(){
       console.log(el)
       storage.push(el)
       localStorage.setItem("storage",JSON.stringify(storage))
-
-      window.location.href="/cart"
-     
+      window.location.href="/Cart"
     }
     let y=JSON.parse(localStorage.getItem("total"))
 
@@ -77,7 +75,7 @@ function Navbar(){
       <a href="">Wishlist</a>
     </MenuItem>
     <MenuItem minH='40px'>
-      <a href="/cart">Your Order</a>
+      <a href="/Cart">Your Order</a>
     </MenuItem>
     <MenuItem minH='40px'>
       <a href="/refferals" color="black">Refferals</a>
@@ -97,7 +95,7 @@ function Navbar(){
       <h1>Total :    {y} Rs</h1>
     </MenuItem>
     <MenuItem minH='40px'>
-      <NavLink to="/cart">
+      <NavLink to="/Cart">
       <Button>Veiw Cart</Button>
       </NavLink>
     </MenuItem>
@@ -121,7 +119,7 @@ function Navbar(){
       <Text>{el.name}</Text>
       <Text>Price : {el.price}</Text>
      
-   <NavLink to="/cart"> <Button w="100%" height={"30px"} bg="black" color="white" variant='outline' onClick={()=>product(el)}> Quick Buy  </Button></NavLink>
+ <Button w="100%" borderRadius="0%" height={"30px"} bg="black" color="white" variant='outline' onClick={()=>product(el)}> Quick Buy  </Button>
 
 
     </GridItem>

@@ -13,7 +13,7 @@ function Allroutes(){
     return <Routes>
          <Route path="/" element={<Home></Home>}></Route>
         <Route path="/account" element={<Account></Account>}></Route>
-        <Route path="/cart" element={<Cart></Cart>}></Route>
+        <Route path="/Cart" element={<Cart></Cart>}></Route>
         <Route path="/product" element={<Product></Product>}></Route>
         <Route path="/refferals" element={<Refferals></Refferals>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>

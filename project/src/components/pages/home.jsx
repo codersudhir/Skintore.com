@@ -47,7 +47,7 @@ function Home(){
       console.log(el)
       storage.push(el)
       localStorage.setItem("storage",JSON.stringify(storage))
-      window.location.href="/cart"
+      window.location.href="/Cart"
     }
 
     return <div>
@@ -66,7 +66,7 @@ function Home(){
       <Image src={el.image_link} boxSize='200px' height={"200px"} alt='Dan Abramov' marginLeft="60px" />
       <Text>{el.name}</Text>
       <Text>Price : {el.price}</Text>
-      <Button w="100%" height={"30px"} bg="black" color="white" variant='outline' onClick={()=>product(el)}>
+      <Button w="100%" height={"30px"} bg="black" color="white" variant='outline' borderRadius="0%" onClick={()=>product(el)}>
     Quick Buy
   </Button>
 
@@ -77,13 +77,18 @@ function Home(){
   <Image width="100%" marginTop="15px" height="200px" border="2px solid black" src='https://static.thcdn.com/images/xlarge/webp/widgets/121-us/33/0907-STDCRE-40923-JCS-Skinstore_September_Referral_Campaign_NoCTA_Strip%28Trade%29-1180x200_copy-012133.jpg' alt='Dan Abramov' />
 </Box>
 <h1 style={{fontSize:"20px",fontWeight:"bolder",marginTop:"15px"}}>What People Are Buying Right Now</h1>
-<Grid templateColumns='repeat(4, 1fr)' marginTop="15px" width="100%" gap={10} textAlign="center" >
+<Grid  w="full"
+   templateColumns={{
+    base:"repeat(1,1fr)",
+    md:"repeat(2,1fr)",
+    lg:"repeat(4,1fr)"
+   }} marginTop="15px" width="100%" gap={10} textAlign="center" >
     {trending.map((el)=>{
-      return <GridItem   gap={5} border="1px solid black" >
+      return <GridItem   gap={5} border="1px solid black;" >
       <Image src={el.image_link} boxSize='200px' height={"200px"} alt='Dan Abramov' marginLeft="60px" />
-      <Text>{el.name}</Text>
+      <Text fontSize="15px">{el.name}</Text>
       <Text>Price : {el.price}</Text>
-      <Button w="100%" height={"30px"} bg="black" color="white" variant='outline' onClick={()=>product(el)}>
+      <Button  w="100%" marginBottom="0%" height={"30px"} borderRadius="0%" bg="black" color="white" variant='outline' onClick={()=>product(el)}>
     Quick Buy
   </Button>
 

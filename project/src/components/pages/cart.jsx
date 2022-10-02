@@ -93,4 +93,4 @@ function Cart(){
 </Flex>    
     </div>
 }
-export default Cart
+export default Cart;
