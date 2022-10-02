@@ -1,11 +1,12 @@
 import { Flex, Button,Image,Stack } from '@chakra-ui/react'
+import { NavLink } from 'react-router-dom'
 
 function Footer(){
     return <div style={{marginTop:"50px"}}>
         <Flex justifyContent="space-around">
             <div>
                 <h1>Sign up to our email list and receive 20% off your next order</h1>
-                <Button bg="black" marginTop={15} color="white">Sign Up</Button>
+                <NavLink to="/signup"> <Button bg="black" marginTop={15} color="white" borderRadius="0%">Sign Up</Button></NavLink>      
             </div>
             <div>
       <h1>Connect with us</h1>
